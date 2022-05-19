@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="baidu-site-verification" content="code-wK84e8CTT6" />
+    <title>E笔记-@ViewBag.Title</title>
+    @Styles.Render("~/css")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("E笔记", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("首页", "Index", "Home")</li>
+                    <li>@Html.ActionLink("关于", "About", "Home")</li>
+                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="col-xs-6 col-md-4">
+                <div>版权信息</div>
+                <div>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+                <div>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+                <div>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+                <div>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+                <div>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <div>友情链接</div>
+                <div> &copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <div>关于我</div>
+                <div>  &copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
